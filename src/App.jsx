@@ -38,44 +38,66 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <h1>2024 파리 올림픽</h1>
-      <form onSubmit={addCountry}>
+      <form onSubmit={addCountry} className="form">
         <input
           type="text"
           placeholder="이름"
-          value={name} onChange={(e) => setName(e.target.value)}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <input
           type="number"
           placeholder="금메달"
-          value={goldMedal} onChange={(e) => setGoldMedal(e.target.value)}
+          value={goldMedal}
+          onChange={(e) => setGoldMedal(e.target.value)}
         />
         <input
           type="number"
           placeholder="은메달"
-          value={silverMedal} onChange={(e) => setSilverMedal(e.target.value)}
+          value={silverMedal}
+          onChange={(e) => setSilverMedal(e.target.value)}
         />
         <input
           type="number"
           placeholder="동메달"
-          value={bronzeMedal} onChange={(e) => setBronzeMedal(e.target.value)}
+          value={bronzeMedal}
+          onChange={(e) => setBronzeMedal(e.target.value)}
         />
-        <button type="submit">국가 추가</button>
-        <button type="submit">업데이트</button>
+        <button type="submit" className="add-btn">국가 추가</button>
+        <button type="button" className="update-btn">업데이트</button>
       </form>
-      <ul>
-        {countrys.map((country) => (
-          <li key={country.id} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            국가명: {country.name},
-            금메달: {country.goldMedal},
-            은메달: {country.silverMedal},
-            동메달: {country.bronzeMedal}
-            <button onClick={() => removeCountry(country.id)}>삭제</button>
-          </li>
-        ))}
-      </ul>
-    </>
+
+      {countrys.length === 0 ? (
+        <p className="empty-message">아직 추가된 국가가 없습니다.</p>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th>국가명</th>
+              <th>금메달</th>
+              <th>은메달</th>
+              <th>동메달</th>
+              <th>액션</th>
+            </tr>
+          </thead>
+          <tbody>
+            {countrys.map((country) => (
+              <tr key={country.id}>
+                <td>국가명: {country.name}</td>
+                <td>금메달: {country.goldMedal}</td>
+                <td>은메달: {country.silverMedal}</td>
+                <td>동메달: {country.bronzeMedal}</td>
+                <td>
+                  <button className="delete-btn" onClick={() => removeCountry(country.id)}>삭제</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </div>
   );
 }
 
