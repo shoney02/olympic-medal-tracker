@@ -21,10 +21,10 @@ function App() {
     };
 
     const updateCountry = (updatedCountry) => {
-      const countryExists = countries.some((country) => country.name === updatedCountry);
+      const countryExists = countries.some((country) => country.name === updatedCountry.name);
 
       if (!countryExists) {
-        alert("중복된 국가가 없습니다.");
+        alert("등록되지 않은 국가입니다.");
         return;
       }
 
