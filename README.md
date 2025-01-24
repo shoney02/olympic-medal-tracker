@@ -25,13 +25,12 @@
 📦 olympic-medals
 ├── 📂 src
 │   ├── 📂 components
-│   │   ├── MedalForm.js  # 국가 추가 및 수정 폼
-│   │   ├── MedalList.js  # 국가별 메달 리스트 테이블
-│   │   ├── MedalItem.js  # 개별 국가 정보 행
-│   │   ├── SortOptions.js  # 정렬 옵션 버튼
-│   ├── App.js  # 메인 애플리케이션 로직
+│   │   ├── MedalForm.jsx  # 국가 추가 및 수정 폼
+│   │   ├── MedalList.jsx  # 국가별 메달 리스트 테이블
+│   │   ├── MedalItem.jsx  # 개별 국가 정보 행
+│   │   ├── SortOptions.jsx  # 정렬 옵션 버튼
+│   ├── App.jsx  # 메인 애플리케이션 로직
 │   ├── App.css  # 스타일링 파일
-│   ├── index.js  # React 앱 진입점
 ├── package.json  # 프로젝트 의존성 관리
 ├── README.md  # 프로젝트 설명 파일
 ```
