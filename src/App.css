@@ -1,15 +1,3 @@
-/* 전체 레이아웃 */
-/* body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f8;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
-
 .container {
   width: 80%;
   max-width: 900px;
@@ -109,4 +97,9 @@ tbody tr:nth-child(even) {
 
 .sort-options label {
   font-size: 16px;
+}
+
+.empty-message {
+  justify-content: center;
+  text-align: center;
 }
