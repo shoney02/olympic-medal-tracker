@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import MedalForm from "./components/MedalForm";
 import MedalList from "./components/MedalList";
-import SortOptions from "./components/SortOptions"; // 새로운 컴포넌트 추가
+import SortOptions from "./components/SortOptions";
 import "./App.css";
 
 function App() {
@@ -33,7 +33,9 @@ function App() {
 
   // 업데이트할 때 추가된 국가가 아닐 경우
   const updateCountry = (updatedCountry) => {
-    const existingCountry = countries.find((country) => country.name === updatedCountry.name);
+    const existingCountry = countries.find(
+      (country) => country.name === updatedCountry.name
+    );
 
     if (!existingCountry) {
       alert("등록되지 않은 국가입니다.");
@@ -57,7 +59,10 @@ function App() {
   const sortCountries = (updatedCountries) => {
     updatedCountries.sort((a, b) =>
       sortByTotal
-        ? (b.goldMedal + b.silverMedal + b.bronzeMedal) - (a.goldMedal + a.silverMedal + a.bronzeMedal)
+        ? b.goldMedal +
+          b.silverMedal +
+          b.bronzeMedal -
+          (a.goldMedal + a.silverMedal + a.bronzeMedal)
         : b.goldMedal - a.goldMedal
     );
 

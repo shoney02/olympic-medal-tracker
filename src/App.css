@@ -75,14 +75,15 @@ table {
   margin-top: 20px;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   text-align: center;
   border: 1px solid #ddd;
 }
 
 th {
-  background-color: #0033
+  background-color: #0033;
 }
 
 tbody tr:nth-child(even) {
