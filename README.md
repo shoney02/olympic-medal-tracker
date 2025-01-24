@@ -1,8 +1,21 @@
-# React + Vite
+# 2024 파리 올림픽 메달 관리 애플리케이션
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+이 프로젝트는 2024년 파리 올림픽을 위한 국가별 메달 집계를 관리하는 웹 애플리케이션입니다. 사용자는 국가를 추가하고, 메달 개수를 수정하며, 국가를 삭제할 수 있습니다. 또한, 금메달 수 또는 총 메달 수를 기준으로 정렬할 수 있습니다.
 
-Currently, two official plugins are available:
+## 주요 기능
+- 국가 추가 및 메달 개수 입력
+- 국가별 메달 정보 수정
+- 국가 삭제
+- 금메달 기준 및 총 메달 기준 정렬 기능
+- 로컬 스토리지를 활용한 데이터 저장
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 기술 스택
+- React
+- JavaScript
+- HTML & CSS
+
+## 사용 방법
+1. 국가명과 메달 개수를 입력한 후 ```국가 추가``` 버튼을 클릭하세요.
+2. 기존 국가의 정보를 수정하려면 동일한 국가명을 입력하고 ```업데이트``` 버튼을 클릭하세요.
+3. 삭제 버튼을 클릭하면 해당 국가가 목록에서 제거됩니다.
+4. ```금메달 기준 정렬``` 또는 ```총메달 기준 정렬```을 선택하여 국가 목록을 정렬할 수 있습니다.
